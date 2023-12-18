@@ -3,7 +3,6 @@
 # dependencies
 /githubtoken.txt
 /src/utils/firebase.js
-/src/utils/constants.js
 /node_modules
 /.pnp
 .pnp.js
@@ -24,3 +23,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env

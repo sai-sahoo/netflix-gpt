@@ -5,7 +5,7 @@ import GptSuggestions from './GptSuggestions'
 const GptSearch = () => {
     return (
         <div>
-            <div className="absolute -z-10">
+            <div className="fixed -z-10">
                 <img src="img/netflix-bg.jpg" alt="bgimg" />
             </div>
             <GptSearchBar />
