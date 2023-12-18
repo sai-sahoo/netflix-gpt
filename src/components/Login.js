@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMG } from "../utils/constants";
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -76,7 +77,7 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src="img/netflix-bg.jpg" alt="bgimg" />
+                <img src={BG_IMG} alt="bgimg" />
             </div>
             <form className="w-4/12 absolute p-12 bg-black my-24 left-0 right-0 mx-auto text-white rounded-lg bg-opacity-80" onSubmit={(e) => e.preventDefault()}>
                 <h1 className="font-bold text-2xl py-4">{isSignInForm ? 'Sign In' : 'Sign Up'}</h1>
