@@ -50,10 +50,10 @@ const Header = () => {
 		dispatch(changeLanguage(e.target.value));
 	}
 	return (
-		<div className='flex justify-between w-screen absolute px-8 py-2 bg-gradient-to-b from-black z-10'>
-			<img className='w-48' src={LOGO_IMG} alt='logo' />
+		<div className='flex flex-col md:flex-row justify-between w-screen absolute px-8 py-2 bg-gradient-to-b from-black z-10'>
+			<img className='w-48 mx-auto md:mx-0' src={LOGO_IMG} alt='logo' />
 			{user && (
-				<div className='flex p-2'>
+				<div className='flex p-2 justify-between'>
 					{ isGptShow && 
 						<select className='text-xl p-2 bg-gray-900 text-white bg-opacity-40' onChange={handleLangChange}>
 							{
@@ -64,8 +64,8 @@ const Header = () => {
 
 						</select>
 					}
-					<button className='text-xl text-white m-6' onClick={handleGptSearchClick}>{isGptShow ? 'Home' : 'GPT Search'}</button>
-					<img className='bg-white opacity-80 m-6 w-8 h-8' src={user.photoURL ? user.photoURL : 'https://static.thenounproject.com/png/3668369-200.png'} alt='user' />
+					<button className='text-xl text-white mt-2 md:m-6' onClick={handleGptSearchClick}>{isGptShow ? 'Home' : 'GPT Search'}</button>
+					<img className='hidden md:block bg-white opacity-80 m-6 w-8 h-8' src={user.photoURL ? user.photoURL : 'https://static.thenounproject.com/png/3668369-200.png'} alt='user' />
 					<button className='text-white text-xl' onClick={handleSigOut}>Sign out</button>
 				</div>
 			)}
